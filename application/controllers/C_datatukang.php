@@ -22,7 +22,7 @@ class C_datatukang extends REST_Controller
 		$jenistukang = $this->get('jenistukang');
 		$namakabupaten = $this->get('namakabupaten');
 
-		 if ($jenistukang=='' &! $namakabupaten=='') {
+		 if ($jenistukang=='' && $namakabupaten=='') {
         	$datane = $this->M_datatukang->datatukang();
             // $data = $this->db->get('datatukang')->result();
         }
