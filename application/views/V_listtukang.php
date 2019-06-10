@@ -8,6 +8,27 @@
     </title>
 </head>
 <body>
+    <form action="" method="GET">
+        <select name="jenistukang">
+            <?php
+                foreach ($datalist2 as $row) {
+            ?>
+            <option value="<?php echo $row->jenistukang;?>"><?php echo $row->jenistukang;?></option>
+            <?php
+                }
+            ?>
+        </select>
+        <select name="namakabupaten">
+            <?php
+                foreach ($datalist as $row) {
+            ?>
+            <option value="<?php echo $row->namakabupaten;?>"><?php echo $row->namakabupaten;?></option>
+            <?php
+                }
+            ?>
+        </select>
+        <input type="submit" value="cari">
+    </form>
     <div class="table-responsive bootstrap">
         <table id="tabel-data" class="table table-striped table-bordered" width="100%" cellspacing="0">
             <thead>
