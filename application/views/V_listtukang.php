@@ -20,7 +20,7 @@
         </select>
         <select name="namakabupaten">
             <?php
-                foreach ($datalist as $row) {
+                foreach ($datalist2 as $row) {
             ?>
             <option value="<?php echo $row->namakabupaten;?>"><?php echo $row->namakabupaten;?></option>
             <?php

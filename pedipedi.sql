@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 4.8.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 09 Jun 2019 pada 00.51
--- Versi server: 10.3.15-MariaDB
--- Versi PHP: 7.3.6
+-- Waktu pembuatan: 10 Jun 2019 pada 04.54
+-- Versi server: 10.1.31-MariaDB
+-- Versi PHP: 7.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -21,6 +21,15 @@ SET time_zone = "+00:00";
 --
 -- Database: `pedipedi`
 --
+
+DELIMITER $$
+--
+-- Prosedur
+--
+CREATE DEFINER=`root`@`localhost` PROCEDURE `tampiltukang` (IN `get_jenistukang` TEXT, IN `get_namakabupaten` TEXT)  NO SQL
+Select * from datatukang a inner join kabupaten b on a.id_kabupaten = b.ID where a.jenistukang = get_jenistukang and b.namakabupaten = get_namakabupaten$$
+
+DELIMITER ;
 
 -- --------------------------------------------------------
 
